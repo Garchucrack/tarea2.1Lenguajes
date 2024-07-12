@@ -35,7 +35,38 @@ class _LoginScreenState extends State<LoginScreen> {
         appBar: AppBar(title: Center(child: Text('Iniciar tu sesión',style: GoogleFonts.vampiroOne(fontSize: 20),)),
         
         ),
-       
+        body: Form(
+          key: _formKey,
+          child: Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Column(
+              children: <Widget>[
+                TextFormField(
+                  controller: _emailController,
+                  decoration: InputDecoration(labelText: 'Correo'),
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return 'Por favor ingresa tu correo';
+                    }
+                    return null;
+                  },
+                ),
+                TextFormField(
+                  controller: _passwordController,
+                  decoration: InputDecoration(labelText: 'Contraseña'),
+                  obscureText: true,
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return 'Por favor ingresa tu contraseña';
+                    }
+                    return null;
+                  },
+                ),
+          
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
