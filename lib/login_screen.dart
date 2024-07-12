@@ -27,4 +27,16 @@ class _LoginScreenState extends State<LoginScreen> {
       }
     }
   }
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Scaffold(
+        appBar: AppBar(title: Center(child: Text('Iniciar tu sesión',style: GoogleFonts.vampiroOne(fontSize: 20),)),
+        
+        ),
+       
+      ),
+    );
+  }
 }
