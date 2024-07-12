@@ -18,7 +18,24 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.vampiroOneTextTheme(Theme.of(context).textTheme),
 
      
-       
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            foregroundColor: Colors.black, backgroundColor: Colors.red, 
+            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15), 
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20), 
+            ),
+          ),
+        ),
+
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+            foregroundColor: Colors.red, padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20), 
+            ),
+          ),
+        ),
 
        
         scaffoldBackgroundColor: const Color.fromARGB(255, 92, 91, 91), 
