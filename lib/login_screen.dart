@@ -62,7 +62,20 @@ class _LoginScreenState extends State<LoginScreen> {
                     return null;
                   },
                 ),
-          
+                SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: _login,
+                  child: Text('Iniciar sesión'),
+                ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => RegisterScreen()),
+                    );
+                  },
+                  child: Text('Registrate'),
+                ),
               ],
             ),
           ),
