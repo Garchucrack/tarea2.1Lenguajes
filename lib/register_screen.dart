@@ -43,7 +43,25 @@ class _RegisterScreenState extends State<RegisterScreen> {
         child: Form(
           key: _formKey,
           child: Column(
-            
+            children: <Widget>[
+              TextFormField(
+                controller: _nameController,
+                decoration: InputDecoration(labelText: 'Nombre'),
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return 'Por favor ingresa tu nombre';
+                  } else if (value.length < 3 || value.length > 10) {
+                    return 'El nombre debe tener entre 3 y 10 caracteres';
+                  }
+                  return null;
+                },
+              ),
+             
+             
+             
+              
+             
+            ],
           ),
         ),
       ),
