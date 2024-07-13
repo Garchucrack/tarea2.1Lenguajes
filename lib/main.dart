@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         ),
 
        
-        scaffoldBackgroundColor: const Color.fromARGB(255, 92, 91, 91), 
+        scaffoldBackgroundColor: const Color.fromARGB(255, 179, 165, 165), 
 
        
         appBarTheme: AppBarTheme(

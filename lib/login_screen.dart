@@ -16,7 +16,6 @@ class _LoginScreenState extends State<LoginScreen> {
     if (_formKey.currentState!.validate()) {
       final email = _emailController.text;
       final password = _passwordController.text;
-      // Replace with your validation logic
       if (email == 'tu_correo@institucional.edu.hn' && password == 'tu_numero_de_cuenta') {
         Navigator.pushReplacement(
           context,
