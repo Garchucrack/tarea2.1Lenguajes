@@ -106,8 +106,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   return null;
                 },
               ),
-              
-              
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: _register,
+                child: Text('Registrarse'),
+              ),
             ],
           ),
         ),
