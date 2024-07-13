@@ -22,7 +22,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
       final password = _passwordController.text;
       final confirmPassword = _confirmPasswordController.text;
 
-     
+      if (password != confirmPassword) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Las contraseñas no coinciden')));
+      } else {
+    
+        print('Nombre: $name');
+        print('Correo: $email');
+        print('Teléfono: $phone');
+        print('Contraseña: $password');
+      }
     }
   }
 
