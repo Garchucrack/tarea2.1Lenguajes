@@ -25,7 +25,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       if (password != confirmPassword) {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Las contraseñas no coinciden')));
       } else {
-    
+       
         print('Nombre: $name');
         print('Correo: $email');
         print('Teléfono: $phone');
@@ -37,7 +37,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     
+      appBar: AppBar(title: Text('Registro')),
+      body: SingleChildScrollView( 
+        padding: EdgeInsets.all(16.0),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            
+          ),
+        ),
+      ),
     );
   }
 }
